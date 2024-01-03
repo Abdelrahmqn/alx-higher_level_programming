@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-import string
-alphabets = string.ascii_lowercase
-print("{}".format(alphabets), end="")
+for i in range(ord('a'), ord('z') + 1):
+    print("{}".format(chr(i)), end="")
