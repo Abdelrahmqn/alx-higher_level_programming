@@ -9,6 +9,7 @@ def lower(c):
 
 
 def uppercase(str):
+    res = ""
     for char in str:
-        print(chr(ord(char) - 32) if lower(char) else char, end="")
-    print("")
+        res += chr(ord(char) - 32) if lower(char) else char
+        print("{}".format(res))
