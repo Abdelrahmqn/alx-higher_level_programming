@@ -29,8 +29,9 @@ int is_palindrome(listint_t **head)
 	{
 		return (0);
 	}
-	prv = prv->next;
-	slow = slow->next;
+		prv = prv->next;
+		slow = slow->next;
 	}
-return (1);
+
+	return (1);
 }
