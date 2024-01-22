@@ -13,4 +13,4 @@ def safe_print_division(a, b):
             print("Inside result: {}".format(res))
         except Exception:
             print("Inside result: None")
-        return None
+            return None
