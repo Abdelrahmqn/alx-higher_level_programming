@@ -1,6 +1,7 @@
 ''''''''''''''''''''''''''''''''''''''''
 '''documentation add function to pass'''
 ''''''''''''''''''''''''''''''''''''''''
+"""import 0-add_integer from 0-add_integer.py"""
     imports:
     >>> add_integer = __import__("0-add_integer").add_integer
 
