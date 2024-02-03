@@ -1,0 +1,17 @@
+''''''''''''''''''''''''''''''''''''''''
+'''documentation add function to pass'''
+''''''''''''''''''''''''''''''''''''''''
+    imports:
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+    check if they are integers:
+    >>> add_integer(57, 70)
+    127
+
+    only integers:
+    >>> add_integer("a", 3)
+    TypeError: a must be an integer
+
+    check with floats:
+    >>> add_integer(3.22, 5.22)
+    8.44
