@@ -15,4 +15,4 @@
 
     check with floats:
     >>> add_integer(3.22, 5.22)
-    8.44
+    8
