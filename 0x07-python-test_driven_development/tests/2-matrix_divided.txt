@@ -13,6 +13,32 @@ this file tests if the function matrix_divided is working correctly.
     imports:
     >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
 
+    failed with strings:
+    >>> mat = [
+    ...     [1, 2, 3],
+    ...     [4, 5, 6]
+    ...     ]
+    >>> matrix_divided(mat, "string")
+    TypeError: div must be a number
+
+    :
+    failed with strings:
+    >>> mat = [
+    ...     [1, 2, 3],
+    ...     [4, 5, 6]
+    ...     ]
+    >>> matrix_divided(mat, (1,))
+    TypeError: div must be a number
+
+    check with characters:
+    >>> mat = [
+    ...          [1, 2, 3],
+    ...          [4, "e", 6]
+    ...          ]
+    >>> matrix_divided(mat, 3)
+    TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
+
     check if the matrix is from integers:
     >>> matrix = [[1, 2, 3], [4, 5, 6]]
     >>> for rows in matrix:
