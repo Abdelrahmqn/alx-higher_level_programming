@@ -1,0 +1,24 @@
+testing the file 5-text_indentation.py
+==============================================
+* most expected errors of the functuion
+""" tests the expected errors as exceptions"""
+
+    imports:
+    text_indentation = __import__('5-text_indentation').text_indentation
+
+
+    function must have string not numbers in the output:
+    >>> text_indentation(2 is 2)
+    TypeError: text must be string
+
+
+    check add:
+    text_indentation("string in my function" + 2)
+    TypeError: text must be string
+
+
+    check add two string !:
+    text_indentation("str in the space" + " " + "how to add two strings")
+    str in the space how to add two strings
+
+
