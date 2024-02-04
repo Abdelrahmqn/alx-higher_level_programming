@@ -1,7 +1,11 @@
-'''''''''''''''''''''''''''''''''''''''''''''''
-'''documentation div-matrix function to pass'''
-'''''''''''''''''''''''''''''''''''''''''''''''
+"""
+trying to make nice documentation.
+"""
+# documentation div-matrix function to pass
 
+"""
+this file tests if the function matrix_divided is working correctly.
+"""
 
 
     imports:
@@ -9,26 +13,34 @@
 
 
 
-    check if the matrix is from floats:
-    >>> if matrix == floats():
-        pass
+    check if the matrix is from integers:
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> for rows in matrix:
+    ...     for elements in rows:
+    ...         if isinstance(elements, int):
+    ...             pass
 
 
 
     check if the matrix is devided by zero:
-    >>> if matrix // 0:
-    ZeroDivisionError: division by zero
-
-
-
-
-    check if the matrix is from integers:
-    >>> matrix /
-    pass
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> try:
+    ...     matrix_divided(matrix, 0)
+    ... except ZeroDivisionError:
+    ...     print('division by zero')
+    division by zero
 
 
 
     check if devided correctly:
-    >>> matrix_divided([[1, 2, 3],
-                        [4, 5, 6]], 4)
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
+
+    check if the matrix is from integers:
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> for rows in matrix:
+    ...     for elements in rows:
+    ...         if isinstance(elements, float):
+    ...             pass
