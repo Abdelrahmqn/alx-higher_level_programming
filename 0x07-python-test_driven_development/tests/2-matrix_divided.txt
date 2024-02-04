@@ -1,0 +1,34 @@
+'''''''''''''''''''''''''''''''''''''''''''''''
+'''documentation div-matrix function to pass'''
+'''''''''''''''''''''''''''''''''''''''''''''''
+
+
+
+    imports:
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+
+
+    check if the matrix is from floats:
+    >>> if matrix == floats():
+        pass
+
+
+
+    check if the matrix is devided by zero:
+    >>> if matrix // 0:
+    ZeroDivisionError: division by zero
+
+
+
+
+    check if the matrix is from integers:
+    >>> matrix /
+    pass
+
+
+
+    check if devided correctly:
+    >>> matrix_divided([[1, 2, 3],
+                        [4, 5, 6]], 4)
+
