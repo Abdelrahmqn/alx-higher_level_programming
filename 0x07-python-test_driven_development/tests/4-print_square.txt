@@ -11,7 +11,7 @@ this file tests if the function print_square is working correctly.
     imports:
     print_square = __import__('4-print_square').print_square
 
-
+"""
     size is integer:
     >>> print_square(10)
     ##########
@@ -24,7 +24,7 @@ this file tests if the function print_square is working correctly.
     ##########
     ##########
     ##########
-
+"""
     check if 0:
     >>> print_square(0)
 
