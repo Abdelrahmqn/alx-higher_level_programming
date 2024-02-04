@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+trying to make nice documentation.
+"""
+
+
 def matrix_divided(matrix, div):
     mesage_lists = "matrix must be a matrix (list of lists) of integers/floats"
     message_rows = "Each row of the matrix must have the same size"
