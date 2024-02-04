@@ -1,0 +1,36 @@
+# documentation div-matrix function to pass
+
+
+"""
+trying to make nice documentation.
+"""
+
+"""
+this file tests if the function say_my_name is working correctly.
+"""
+imports:
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+
+    my is string:
+    >>> say_my_name("string=string", "stri2gs" + 3)
+    TypeError: can only concatenate str (not "int") to str
+
+
+    no integers! :
+    >>> say_my_name("mynameis", 3)
+    TypeError: last_name must be a string
+
+    no integers part two! :
+    >>> say_my_name(5, "where is my name")
+    TypeError: first_name must be a string
+
+
+    the function doesn't support floats! :
+    >>> say_my_name(5.65, "where is my name")
+    TypeError: first_name must be a string
+
+
+    no floats!:
+    >>> say_my_name("mynameis", 3.14)
+    TypeError: last_name must be a string
