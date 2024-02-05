@@ -4,5 +4,6 @@
 
 
 class MyList(list):
+    """nice documentation."""
     def print_sorted(self):
         print(sorted(self))
