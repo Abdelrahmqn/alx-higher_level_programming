@@ -4,6 +4,9 @@
 
 
 class MyList(list):
-    """nice documentation."""
+    """inherets from list"""
     def print_sorted(self):
+        """print_sorted support to print in sorted order.
+        """
+
         print(sorted(self))
