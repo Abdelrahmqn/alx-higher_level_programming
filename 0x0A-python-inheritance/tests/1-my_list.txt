@@ -1,0 +1,32 @@
+# this file is to test the function my_list.
+# mylist function is function to print the list in sorted() order!.
+
+===================================================================
+    >>> MyList = __import__('1-my_list').MyList
+-------------------------------------------------------------------
+
+
+    checks if the function works with strings:
+    >>> MyList.print_sorted([1, "str", 3, 6])
+    TypeError: '<' not supported between instances of 'str' and 'int'
+--------------------------------------------------------------------
+
+
+    checks with lists:
+    >>> MyList.print_sorted([1, 2, 3, 4, 5, [1, 3, 4, 7], [1, 5]])
+    TypeError: '<' not supported between instances of 'list' and 'int'
+--------------------------------------------------------------------
+
+
+    checks if characters:
+    >>> MyList.print([1, g, 4])
+    NameError: name 'g' is not defined
+--------------------------------------------------------------------
+
+
+    corect checks:
+    >>> MyList.print([1, 3, 5, 4, 8, 2])
+    [1, 2, 3, 5, 8]
+--------------------------------------------------------------------
+
+
