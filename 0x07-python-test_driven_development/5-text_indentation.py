@@ -19,4 +19,4 @@ def text_indentation(text):
             print()
             print()
         else:
-            print(i, end="")
+            print(i.strip(), end="")
