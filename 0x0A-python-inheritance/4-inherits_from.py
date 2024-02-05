@@ -8,7 +8,7 @@ True inherited from class object"""
 def inherits_from(obj, a_class):
     """inderectly or directly
     """
-    if type(obj) is not a_class:
+    if type(obj) != a_class:
         return True
     else:
         return False
