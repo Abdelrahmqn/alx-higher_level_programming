@@ -18,11 +18,15 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """return width."""
+
         return self.__width
 
     @width.setter
     def width(self, value):
-        if not isinstance(value, int):
+        """make sure of the value is int."""
+
+        if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -30,11 +34,15 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """return height."""
+
         return self.__height
 
     @height.setter
     def height(self, value):
-        if not isinstance(value, int):
+        """height is an int."""
+
+        if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -42,13 +50,15 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """x must be int."""
+
         return self.__x
 
     @x.setter
     def x(self, value):
         """x is the horizontal position."""
 
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -56,13 +66,15 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """y must be integer."""
+
         return self.__y
 
     @y.setter
     def y(self, value):
         """y is the verticle posision of the rectangle."""
 
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
@@ -74,6 +86,8 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """this function displays the hash with the correct width/height."""
+
         display_width = "#" * self.__width
         i = 0
         for i in range(self.__y):
