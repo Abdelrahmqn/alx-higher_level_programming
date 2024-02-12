@@ -22,15 +22,6 @@ class Base:
 class Rectangle(Base):
     """class that defines a rectangle with methods."""
 
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """to init constructor."""
-
-        super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
-
     @property
     def width(self):
         return self.__width
@@ -86,6 +77,15 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = value
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """to init constructor."""
+
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     def area(self):
         """returns the area of the rectangle."""
