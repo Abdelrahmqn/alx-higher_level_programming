@@ -6,10 +6,12 @@
 class Base:
     """The goal of it is to manage id attribute in all your future classes and
     to avoid duplicating the same code"""
-
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """the constructor.
+        """
+
         if id is not None:
             self.id = id
         else:
@@ -19,8 +21,14 @@ class Base:
 
 class Rectangle(Base):
     """class that defines a rectangle
-    creates a rectangles methods to be
-    used"""
+    creates a rectangles methods to be used"""
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -78,13 +86,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = value
-
-    def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
 
     def area(self):
         """returns the area of the rectangle
