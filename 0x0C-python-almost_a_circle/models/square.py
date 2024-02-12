@@ -59,3 +59,9 @@ class Square(Rectangle):
         if 'y' in kwargs:
             self.y = kwargs['y']
         return f"[Square] ({self.id}) {self.size}/{self.size} - {xs}/{ys}"
+
+    def to_dictionary(self):
+        """returns the dict of square."""
+
+        dic = {'id': self.id,'x': self.x, 'size': self.__size, 'y': self.y}
+        return dic
