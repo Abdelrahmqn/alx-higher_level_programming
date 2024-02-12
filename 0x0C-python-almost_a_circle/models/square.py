@@ -26,6 +26,8 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        xs = self.x
+        ys = self.y
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
@@ -43,4 +45,4 @@ class Square(Rectangle):
             self.x = kwargs['x']
         if 'y' in kwargs:
             self.y = kwargs['y']
-        return f"[Square] ({self.id}) {self.size}/{self.size} - {self.x}/{self.y}"
+        return f"[Square] ({self.id}) {self.size}/{self.size} - {xs}/{ys}"
