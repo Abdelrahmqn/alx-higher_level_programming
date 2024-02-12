@@ -20,10 +20,11 @@ class Base:
 
 
 class Rectangle(Base):
-    """class that defines a rectangle
-    creates a rectangles methods to be used"""
+    """class that defines a rectangle with methods."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """to init constructor."""
+
         super().__init__(id)
         self.width = width
         self.height = height
@@ -62,8 +63,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """x is the horizontal position of the rectangle
-        or the verticle"""
+        """x is the horizontal position."""
 
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
@@ -78,8 +78,8 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """y is the verticle posision of the rectangle
-        or the horizontal"""
+        """y is the verticle posision of the rectangle."""
+
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         elif value < 0:
@@ -88,8 +88,7 @@ class Rectangle(Base):
             self.__y = value
 
     def area(self):
-        """returns the area of the rectangle
-        """
+        """returns the area of the rectangle."""
 
         return self.__width * self.__height
 
@@ -102,6 +101,8 @@ class Rectangle(Base):
             print(" " * self.__x + display_width)
 
     def __str__(self):
+        """string to be stdout."""
+
         ids = self.id
         xs = self.x
         ys = self.y
@@ -109,6 +110,8 @@ class Rectangle(Base):
         return r
 
     def update(self, *args, **kwargs):
+        """update the attributes of the class."""
+
         ids = self.id
         xs = self.x
         ys = self.y
