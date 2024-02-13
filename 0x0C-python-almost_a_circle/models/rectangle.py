@@ -3,7 +3,6 @@
 """
 from models.base import Base
 
-
 class Rectangle(Base):
     """class that defines a rectangle with methods."""
 
@@ -101,7 +100,7 @@ class Rectangle(Base):
         ids = self.id
         xs = self.x
         ys = self.y
-        r = f"[Rectangle] ({ids}) <{xs}>/<{ys}> - {self.width}/{self.height}"
+        r = f"[Rectangle] ({ids}) {xs}/{ys} - {self.width}/{self.height}"
         return r
 
     def update(self, *args, **kwargs):
@@ -133,3 +132,14 @@ class Rectangle(Base):
             self.y = kwargs['y']
 
         return f"[Rectangle] ({ids}) {self.width}/{self.height} - {xs}/{ys}"
+
+    def to_dictionary(self):
+        """returns the dict of square."""
+
+        heights = self.__height
+        widths = self.__width
+        ids = self.id
+        xs = self.x
+        ys = self.y
+        dic = {'x': xs, 'y': ys, 'id': ids, 'height': heights, 'width': widths}
+        return dic
