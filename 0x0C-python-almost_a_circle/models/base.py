@@ -3,6 +3,7 @@
 """
 import json
 
+
 class Base:
     """The goal of it is to manage id attribute in all your future classes and
     to avoid duplicating the same code"""
@@ -37,3 +38,12 @@ class Base:
         filename = cls.__name__ + ".json"
         with open(filename, 'w', encoding="utf-8") as file:
             file.write(cls.to_json_string(list_objs))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """json_string is a string representing a list of the dicts"""
+
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
