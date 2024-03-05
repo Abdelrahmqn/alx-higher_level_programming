@@ -1,7 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """the module documentation json
 """
-
 
 import json
 
