@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import json
-""""""
+"""from j string.
+"""
 
 
 def from_json_string(my_str):
