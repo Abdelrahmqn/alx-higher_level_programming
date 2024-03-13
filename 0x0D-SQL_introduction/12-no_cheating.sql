@@ -1,5 +1,4 @@
 -- update the record
-UPDATE second_table
+SELECT second_table
 SET score = 10
-WHERE score == 14
-ORDER BY score DESC;
+WHERE name = 'Bob';
