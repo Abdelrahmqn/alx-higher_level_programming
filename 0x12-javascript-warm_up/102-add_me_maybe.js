@@ -1,1 +1,3 @@
-function incrementAndCall(number, theFunction) {
+exports.addMeMaybe = function (number, theFunction) {
+  theFunction(++number);
+};
