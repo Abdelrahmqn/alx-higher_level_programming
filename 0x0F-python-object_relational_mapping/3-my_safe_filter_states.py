@@ -13,11 +13,10 @@ if __name__ == "__main__":
 
     curse.execute("""SELECT id, name FROM states
                   WHERE name LIKE BINARY %s
-                  ORDER BY states.id ASC""", (sys.argv[4] + '%',))
+                  ORDER BY states.id ASC""", (sys.argv[4], ))
 
-    rows = curse.fetchone()
+    rows = curse.fetchall()
 
     for row in rows:
         print(row)
-
     con.close()

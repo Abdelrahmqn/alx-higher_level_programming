@@ -19,5 +19,5 @@ if __name__ == "__main__":
 
     for row in rows:
         print(row)
-
+    print(sys.argv[4])
     con.close()
