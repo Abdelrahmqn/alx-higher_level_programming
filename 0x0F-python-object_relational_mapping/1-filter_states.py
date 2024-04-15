@@ -11,7 +11,7 @@ if __name__ == "__main__":
     curse = conn.cursor()
 
     curse.execute("""SELECT * FROM states WHERE name
-                LIKE 'N%' ORDER BY states.id""")
+                LIKE 'N%' ORDER BY states.id ASC""")
 
     result = curse.fetchall()
 
