@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     curse = con.cursor()
 
-    curse.execute("""SELECT id, name FROM states WHERE name LIKE '{}%'
+    curse.execute("""SELECT id, name FROM states WHERE name LIKE BINARY '{}%'
                     ORDER BY states.id ASC""".format(sys.argv[4]))
 
     rows = curse.fetchall()
