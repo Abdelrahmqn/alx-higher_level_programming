@@ -13,7 +13,7 @@ if __name__ == "__main__":
                                host="localhost")
 
         cursor = conn.cursor()
-        cursor.execute("SELECT * FROM states")
+        cursor.execute("SELECT id, name FROM states ORDER BY id ASC")
 
         result = cursor.fetchall()
 
