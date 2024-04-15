@@ -1,16 +1,25 @@
 #!/usr/bin/python3
-"""  lists all states from the database hbtn_0e_0_usa """
-import MySQLdb
+
+"""Module Documentaion"""
+
+
 import sys
+import MySQLdb
 
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", user=sys.argv[1],
-                         passwd=sys.argv[2], db=sys.argv[3], port=3306)
-    cur = db.cursor()
-    cur.execute("SELECT * FROM states")
-    rows = cur.fetchall()
-    for row in rows:
+    user = sys.argv[1]
+    passwd = sys.argv[2]
+    db = sys.argv[3]
+    conn = MySQLdb.connect(user=user, passwd=passwd, db=db, port=3306, host="localhost")
+
+    cursor = conn.cursor()
+    cursor.execute("SELECT id, name FROM states ORDER BY id ASC")
+
+    result = cursor.fetchall()
+
+    for row in result:
         print(row)
-    cur.close()
-    db.close()
+
+    conn.close()
+    cursor.close()
