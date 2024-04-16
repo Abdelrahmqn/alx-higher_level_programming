@@ -10,7 +10,10 @@ if __name__ == "__main__":
 
     curse = con.cursor()
 
-    curse.execute("""SELECT id, name FROM cities
+    curse.execute("""SELECT cities.id, cities.name AS city_name, states.name AS
+                     state_name
+                     FROM cities
+                     JOIN states ON cities.state_id = states.id
                      ORDER BY cities.id ASC""")
 
     rows = curse.fetchall()
