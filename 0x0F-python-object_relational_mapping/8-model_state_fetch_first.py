@@ -13,13 +13,11 @@ if __name__ == "__main__":
     cur = con.cursor()
 
     cur.execute("""SELECT id, name FROM states
-                   WHERE states.id = 1
                    ORDER BY states.id ASC""")
 
-    Rows = cur.fetchall()
+    thisrow = cur.fetchone()
 
-    for row in Rows:
-        print(*row, sep=': ')
+    print(*thisrow, sep=': ')
 
     con.close()
 
