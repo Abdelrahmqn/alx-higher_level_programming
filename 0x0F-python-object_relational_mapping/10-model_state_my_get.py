@@ -18,9 +18,9 @@ if __name__ == "__main__":
     session = Session()
 
     states = session.query(State).order_by(
-        State.id).filter(State.name.like(sys.argv[4])).all()
-    for state in states:
-        print("{}".format(state.id))
+        State.id).filter(State.name.like(sys.argv[4])).first()
+    if states:
+        print("{}".format(states.id))
     else:
         print("Not found")
 
