@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """module documentation"""
 
+import sqlalchemy
 import MySQLdb
 import sys
 from model_state import Base, State
