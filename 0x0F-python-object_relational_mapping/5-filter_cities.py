@@ -13,12 +13,12 @@ if __name__ == "__main__":
     curse.execute("""SELECT cities.name AS city_name
                          FROM cities
                          JOIN states ON cities.state_id = states.id
-                         WHERE states.name = '{}%'
-                         ORDER BY cities.id ASC""".format(sys.argv[4]))
+                         WHERE states.name = %s
+                         ORDER BY cities.id ASC""", (sys.argv[4],))
 
     rows = curse.fetchall()
 
-    for row in rows:
-        print("{}, ".format(row), end="")
+    step = list(row[0] for row in rows)
+    print(*step, sep=", ")
 
     con.close()
