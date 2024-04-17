@@ -16,7 +16,8 @@ if __name__ == "__main__":
                    ORDER BY states.id ASC""")
 
     thisrow = cur.fetchone()
-
+    if thisrow is None:
+       exit(1)
     print(*thisrow, sep=': ')
 
     con.close()
