@@ -4,6 +4,7 @@
 
 from sqlalchemy import Column, MetaData, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
 
 Base = declarative_base(metadata=MetaData())
 
@@ -15,3 +16,4 @@ class State(Base):
 
     id = Column(Integer, unique=True, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
+

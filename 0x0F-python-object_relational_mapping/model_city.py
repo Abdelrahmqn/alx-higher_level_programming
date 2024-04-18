@@ -4,11 +4,12 @@
 """
 
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import relationship
-Base1 = declarative_base()
+from model_state import Base
 
-class City(Base1):
+
+class City(Base):
     """class city Documentaion"""
 
     __tablename__ = 'cities'
@@ -16,5 +17,3 @@ class City(Base1):
     id = Column(Integer, unique=True, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
-
-    state = relationship("State", back_populates="City")
