@@ -19,7 +19,7 @@ if __name__ == "__main__":
     query = session.query(City.name,
                           State.name,
                           City.id).filter(State.id == City.state_id)
-    for city in query:
-        print("{}: ({}) {}".format(city[1], city[2], city[0]))
+    for argn in query:
+        print("{}: ({}) {}".format(argn[1], argn[2], argn[0]))
 
     session.close()
