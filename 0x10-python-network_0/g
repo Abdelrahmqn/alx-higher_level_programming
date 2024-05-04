@@ -1,4 +1,5 @@
 #!/bin/bash
-
+echo "=>"
+ read commit
 git add .
-git commit -m '{$ }' ; git push
+git commit -m "${commit}" ; git push
