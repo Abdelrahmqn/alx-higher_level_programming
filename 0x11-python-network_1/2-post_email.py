@@ -10,4 +10,4 @@ if __name__ == "__main__":
     email = sys.argv[2]
     email_data = urlencode({'email': email}).encode('utf-8')
     with urlopen(sys.argv[1], data=email_data) as res:
-        print("Your email is: {}".format(res.read().decode('utf-8')))
+        print(res.read().decode('utf-8'))
