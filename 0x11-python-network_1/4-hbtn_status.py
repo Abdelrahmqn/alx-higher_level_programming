@@ -9,4 +9,4 @@ if __name__ == "__main__":
     print("Body response:")
     print("\t- type: {}".format(type(req.text)))
     if req.status_code == 200:
-        print("\t- content: OK")
+        print("\t- content: {}".format(req.status_code))
