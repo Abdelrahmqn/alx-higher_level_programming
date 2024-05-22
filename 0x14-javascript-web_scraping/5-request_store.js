@@ -1,4 +1,4 @@
 #!/usr/bin/node
-const f = require('f');
-const rq = require('rq');
-rq(process.argv[2]).pipe(f.createWriteStream(process.argv[3]));
+const fs = require('fs');
+const request = require('request');
+request(process.argv[2]).pipe(fs.createWriteStream(process.argv[3]));
